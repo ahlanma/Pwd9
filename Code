@@ -1,0 +1,36 @@
+<?php
+malade
+"koneksi. php"
+(POST[ nim 1)) {
+Sid
+= 5
+_POST[' id']
+35q1 =
+"select mahasiswa.nim , mahasiswa. nama as nama_hs, mata_kulian. kode, mata_kulian.nama as nama _matkul, mata_kuliah. sks , mata where mahasiswa. nim like '%$cari
+_kullah. sem, khs.nilai FROM khs,mahasiswa,mata_kuliah
+_nim%'
+mahasiswa. id-khs.id_mhs";
+and mata_kuliah. id=khs.id_matkul and
+§tampil
+= mysqli_query (Scon,
+$sql);
+(mysqLi_num_rows ($tampil)
+$no = 1;
+bresponse
+• = array;
+Tresponse["data"] = array();
+§response["data"]["mahasiswa"] = array();
+§response["data"]["khs"] = array();
+while ($r = mysqli_fetch_array($tampil)) {
+$h['nim']
+$['nim'];
+$h[nama'] = $r[ nama'];
+$h[ jenis
+_kelamin '] = brI jenis_kelamin 'l;
+$h['alamat'] = $r['alamat'];
+Sh['tgl_lahir'] = $r['tgl_lahir'];
+array_push response["data"], $h);
+echo Json_encode (bresponse);
+」
+else {
+response["message"] - "tidak ada data"; echo Json_encode (bresponse);
